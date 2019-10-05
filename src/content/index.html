@@ -1,40 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
-    <meta name="description" content="Description" />
 
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Site title</title>
+  <meta name="description" content="Description" />
 
-    <link rel="manifest" href="manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <!-- Title -->
+  <meta property="og:title" content="" />
+  <!-- OPTIONAL description. 2-4 sentences. -->
+  <meta property="og:description" content="" />
+  <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
+  <meta property="og:url" content="" />
+  <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
+  <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" sizes="192x192" href="assets/pwa/icons/icon-192x192.png" />
 
-    <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+  <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png" />
 
-    <script src="js/main.js"></script>
-  </body>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="header__heading">Umyj ząbki!</h1>
+    <img src="../assets/img/dentist-158225.png" alt="picture of a tooth" class="header__teeth">
+  </header>
+  <main>
+    <section class="play">
+      <p class="play__text">zmień kolor</p>
+      <div class="play__bg-color"></div>
+      <p class="play__text">myj przez 2 minutki</p>
+      <div class="play__icon">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Xkk8w3ln-Wk?start=63" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="rewards">
+      <h2 class="rewards__heading">zdobyte zwierzaki</h2>
+      <img src="../assets/img/bear.jpg" alt="picture of bear" class="rewards__animal rewards__animal--1">
+      <img src="../assets/img/croc.jpg" alt="picture of bear" class="rewards__animal rewards__animal--2">
+      <img src="../assets/img/delphin.jpg" alt="picture of bear" class="rewards__animal rewards__animal--3">
+      <img src="../assets/img/fish.jpg" alt="picture of bear" class="rewards__animal rewards__animal--4">
+      <img src="../assets/img/giraffe.jpg" alt="picture of bear" class="rewards__animal rewards__animal--5">
+      <img src="../assets/img/hipo.jpg" alt="picture of bear" class="rewards__animal rewards__animal--6">
+      <img src="../assets/img/lion.jpg" alt="picture of bear" class="rewards__animal rewards__animal--7">
+      <img src="../assets/img/monkey.jpg" alt="picture of bear" class="rewards__animal rewards__animal--8">
+      <img src="../assets/img/nerval.jpg" alt="picture of bear" class="rewards__animal rewards__animal--9">
+      <img src="../assets/img/zebra.jpg" alt="picture of bear" class="rewards__animal rewards__animal--10">
+    </section>
+
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+
 </html>

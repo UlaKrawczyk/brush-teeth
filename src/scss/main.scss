@@ -6,11 +6,34 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 body {
   color: $yellow;
   background: $violet;
+}
+
+.header {
+
+  &__heading {}
+
+  &__teeth {
+    width: 10rem;
+  }
+}
+
+.play {
+
+  &__icon {}
+}
+
+.rewards {
+
+  &__animal {
+    width: 20%;
+  }
 }
