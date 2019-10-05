@@ -1,39 +1,131 @@
 @import "_normalize";
 @import "_variables";
-
+@import url('https://fonts.googleapis.com/css?family=Paytone+One|Raleway:400,500,700&display=swap&subset=latin-ext');
+// font-family: 'Raleway', sans-serif;
 
 html {
-  box-sizing: border-box;
+  font-size: 16px;
 }
 
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 
 body {
-  color: $yellow;
-  background: $violet;
+  box-sizing: border-box;
+  color: $font-yellow;
+  background: $blue;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+  margin: 40px 2rem 40px 2rem;
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
 
-  &__heading {}
+  &__heading {
+    font-family: 'Paytone One', sans-serif;
+    letter-spacing: 1px;
+    margin-right: .9rem;
+    font-size: 26px;
+
+    @media (min-width: 430px) {
+      font-size: 32px;
+      margin-right: 1.5rem;
+      letter-spacing: 2px;
+    }
+  }
 
   &__teeth {
-    width: 10rem;
+    width: 3rem;
+    height: auto;
+
+    @media (min-width: 430px) {
+      width: 4rem;
+    }
   }
 }
 
 .play {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: flex-start;
+  align-items: center;
 
-  &__icon {}
+  &__text {
+    font-size: 16px;
+  }
+
+  &__text--2 {
+    grid-column: 1/span 2;
+    margin: 10px 0 20px 0;
+  }
+
+  &__button {
+    width: 50px;
+    height: 40px;
+    background-color: $yellow;
+    border-radius: 10%;
+    box-shadow: 0 2px 7px 3px rgb(6, 20, 102);
+    margin: 10px;
+
+    &--2 {
+      width: 50px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__number {
+    font-size: 24px;
+    font-weight: bold;
+    color: $font-blue;
+  }
+
+  &__video {
+    width: 10rem;
+    height: 6rem;
+    grid-column: 1/span 2;
+    justify-self: flex-start;
+    margin-bottom: 10px;
+  }
 }
 
 .rewards {
 
-  &__animal {
-    width: 20%;
+  &__heading {
+    font-family: 'Paytone One', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+    border: 1px dotted white;
+  }
+
+  &__animal {
+    opacity: 0;
+    width: 27%;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 7px 3px rgb(6, 20, 102);
+    transition: .3s ease;
+  }
+}
+
+.visible {
+  opacity: 1;
 }
