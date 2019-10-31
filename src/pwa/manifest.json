@@ -1,8 +1,8 @@
 {
   "name": "Brush Your Teeth",
   "short_name": "Brush Teeth",
-  "theme_color": "#000000",
-  "background_color": "#fff",
+  "theme_color": "#037529",
+  "background_color": "rgba(255,255,255, 0)",
   "display": "standalone",
   "orientation": "portrait",
   "scope": "/brush-teeth/",

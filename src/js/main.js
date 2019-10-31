@@ -15,6 +15,7 @@ if ('serviceWorker' in navigator) {
 
 const checkButton = document.querySelector('.play__button--js');
 const brushNumber = document.querySelector('.play__number--js');
+const clearButton = document.querySelector('.footer__button--js');
 const images = document.querySelectorAll('.rewards__wrapper img');
 let number = 0;
 let imageNumber = 0;
@@ -40,7 +41,7 @@ checkButton.addEventListener('click', () => {
   brushNumber.innerHTML = number;
   localStorage.setItem('brushNumber', number);
 
-  if (number == 1 || number == 3 || number == 5 || number == 10 || number == 12 || number == 15 || number == 17 || number == 20 || number == 22 || number == 25 || number == 27 || number == 30) {
+  if (number == 1 || number == 3 || number == 6 || number == 8 || number == 11 || number == 13 || number == 16 || number == 18 || number == 21 || number == 23 || number == 26 || number == 28 || number == 31 || number == 33 || number == 36 || number == 38 || number == 41 || number == 43 || number == 46 || number == 48 || number == 51 || number == 53 || number == 56 || number == 58 || number == 61 || number == 63 || number == 66 || number == 68 || number == 71) {
 
     images[imageNumber].classList.add('visible');
     imagesNumbers.push(imageNumber);
@@ -49,3 +50,18 @@ checkButton.addEventListener('click', () => {
     localStorage.setItem('imageNumber', imageNumber);
   }
 });
+
+clearButton.addEventListener('click', () => {
+
+  for (let element of imagesNumbers) {
+    images[element].classList.remove('visible');
+  }
+  localStorage.clear();
+
+  number = 0;
+  localStorage.setItem('brushNumber', number);
+  brushNumber.innerHTML = number;
+
+  imageNumber = 0;
+  imagesNumbers = [];
+})
